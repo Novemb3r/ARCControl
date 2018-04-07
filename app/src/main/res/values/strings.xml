@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ARC Control</string>
+
+    <string name="about_text">
+        Designed and developed by AtackRobocopter team special for WiFi Control Battle contest, 2017
+    </string>
+
+    <string name="about_title">О программе</string>
+    <string name="cmd_send_failure">Не удалось послать команду</string>
+    <string name="connection_test_success">Соединение установлено!</string>
+    <string name="connection_test_failure">Не удалось установить соединение</string>
+    <string name="connection_test_start">Начало теста связи</string>
+    <string name="arc">Attack Robocopter</string>
+    <string name="settings">Настройки</string>
+    <string name="connect">Подключиться</string>
+    <string name="about_title_condensed">\?</string>
+    <string name="settings_saved">Сохранено!</string>
+    <string name="settings_save">Сохранить</string>
+    <string name="settings_tank_control_orientation">Ориентация контроллера</string>
+    <string name="settings_orientation_vertical">Вертикальная</string>
+    <string name="settings_orientation_horizontal">Горизонтальная</string>
+    <string name="settings_send_delay">Период посылки команд (мс)</string>
+</resources>

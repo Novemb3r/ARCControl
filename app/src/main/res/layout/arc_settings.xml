@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/settings_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:showDividers="middle"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/card_back_rect"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IP:"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <EditText
+                android:id="@+id/settingsIpEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="192.168.1.185"/>
+
+            <Button
+                android:id="@+id/connectButton"
+                style="@style/Widget.AppCompat.ActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:onClick="onConnectButton"
+                android:text="@string/connect"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:divider="?android:dividerHorizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:gravity="center_vertical"
+                android:onClick="onTankOrientation">
+
+                <TextView
+                    android:layout_above="@+id/settings_tank_control_orientation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/abc_list_item_padding_horizontal_material"
+                    android:textSize="16sp"
+                    android:textColor="#FF222222"
+                    android:text="@string/settings_tank_control_orientation" />
+
+                <TextView
+                    android:id="@+id/settings_tank_control_orientation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/abc_list_item_padding_horizontal_material"
+                    android:textSize="14sp"
+                    android:textColor="#FF707070"
+                    android:text="Описание"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <TextView
+                    style="@style/SettingsSingleLineItemTitle"
+                    android:text="@string/settings_send_delay"/>
+
+                <EditText
+                    style="@style/SettingsEditText.Right"
+                    android:id="@+id/settings_parameter_send_delay" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="72dp" >-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center_vertical">-->
+
+                <!--<TextView-->
+                    <!--android:layout_above="@+id/settings_secondary_text_1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="@dimen/abc_list_item_padding_horizontal_material"-->
+                    <!--android:textSize="16sp"-->
+                    <!--android:textColor="#FF222222"-->
+                    <!--android:text="Настройка с описанием" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/settings_secondary_text_1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_marginLeft="@dimen/abc_list_item_padding_horizontal_material"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:textColor="#FF707070"-->
+                    <!--android:text="Описание"/>-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<android.support.v7.widget.SwitchCompat-->
+                <!--style="@style/SettingsSwitch"/>-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="56dp" >-->
+
+            <!--<TextView-->
+                <!--style="@style/SettingsSingleLineItemTitle"-->
+                <!--android:text="Настройка без описания" />-->
+
+            <!--<android.support.v7.widget.SwitchCompat-->
+                <!--style="@style/SettingsSwitch"/>-->
+
+        <!--</RelativeLayout>-->
+
+
+        <!--<TextView-->
+            <!--style="@style/SettingsSubcategoryTitle"-->
+            <!--android:text="Подкатегория"/>-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="56dp">-->
+
+            <!--<TextView-->
+                <!--style="@style/SettingsSingleLineItemTitle"-->
+                <!--android:id="@+id/settings_parameter_range_text_1"-->
+                <!--android:text="Диапазон значений"/>-->
+
+            <!--<EditText-->
+                <!--style="@style/SettingsEditText"-->
+                <!--android:id="@+id/settings_parameter_min_1"-->
+                <!--android:layout_toLeftOf="@+id/settings_parameter_dash_1" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/settings_parameter_dash_1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:text="-"-->
+                <!--android:layout_toLeftOf="@+id/settings_parameter_max_1"/>-->
+
+            <!--<EditText-->
+                <!--style="@style/SettingsEditText.Right"-->
+                <!--android:id="@+id/settings_parameter_max_1" />-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="56dp">-->
+
+            <!--<TextView-->
+                <!--style="@style/SettingsSingleLineItemTitle"-->
+                <!--android:text="Одно значение"/>-->
+
+            <!--<EditText-->
+                <!--style="@style/SettingsEditText.Right"-->
+                <!--android:id="@+id/settings_parameter_step_1" />-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<Button-->
+            <!--style="@style/Widget.AppCompat.ActionButton"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="56dp"-->
+            <!--android:text="Красивая кнопка во всю строку"/>-->
+
+    </LinearLayout>
+
+</ScrollView>

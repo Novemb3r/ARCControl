@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:max="2000"
+        android:progress="1000"
+        android:maxHeight="1000dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="0.05"
+        android:rotation="270"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:gravity="end"
+        android:textSize="24sp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="0.05"
+        android:rotation="270"
+        android:text="0"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:textSize="24sp"/>
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:max="2000"
+        android:progress="1000"
+        android:maxHeight="1000dp"/>
+
+</LinearLayout>
